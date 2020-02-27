@@ -3,7 +3,7 @@
 class Article {
   constructor(domElement) {
     this.domElement = domElement;
-    console.log(this);
+    console.log(this.domElement);
     this.expandButton = this.domElement.querySelector('.expandButton');
     this.expandButton.textContent = 'Expand';
     this.expandButton.addEventListener('click', () => {
