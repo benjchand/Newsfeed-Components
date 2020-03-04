@@ -87,12 +87,23 @@
 // console.log(addPy('pypickles'))
 // console.log(addPy('chocolate'))
 
-function removeIndex(str, charLocation) {
-    let firstPart = str.substring(0, charLocation);
-    let secondPart = str.substring(charLocation + 1, str.length)
-    return firstPart + secondPart
-}
+// function removeIndex(str, charLocation) {
+//     let firstPart = str.substring(0, charLocation);
+//     let secondPart = str.substring(charLocation + 1, str.length)
+//     return firstPart + secondPart
+// }
 
-console.log(removeIndex('chocolate', 3));
-console.log(removeIndex('chocolate', 6));
-console.log(removeIndex('chocolate', 0));
+// console.log(removeIndex('chocolate', 3));
+// console.log(removeIndex('chocolate', 6));
+// console.log(removeIndex('chocolate', 0));
+
+function switchFirstAndLast(str) {
+    if (str.length <= 1) {
+        return str
+    }
+    let middlePart = str.substring(1, str.length - 1);
+    return (str.charAt(str.length - 1) + middlePart + str.charAt(0))
+}
+console.log(switchFirstAndLast('Pickles'))
+console.log(switchFirstAndLast('B'))
+console.log(switchFirstAndLast('AZ'))
