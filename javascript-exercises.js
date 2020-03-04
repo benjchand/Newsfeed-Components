@@ -74,16 +74,25 @@
 //     return ((num1 > 0 && num2 < 0) || (num2 > 0 && num1 < 0))
 // }
 
-function addPy(str) {
-    if (str == null || str == undefined || str.substring(0, 2) == 'py' || str.substring(0, 2) == 'Py') {
-        return str
-    }
-    else {
-        return 'Py' + str
-    }
+// function addPy(str) {
+//     if (str == null || str == undefined || str.substring(0, 2) == 'py' || str.substring(0, 2) == 'Py') {
+//         return str
+//     }
+//     else {
+//         return 'Py' + str
+//     }
+// }
+// console.log(addPy('Pypickles'))
+// console.log(addPy('yickles'))
+// console.log(addPy('pypickles'))
+// console.log(addPy('chocolate'))
+
+function removeIndex(str, charLocation) {
+    let firstPart = str.substring(0, charLocation);
+    let secondPart = str.substring(charLocation + 1, str.length)
+    return firstPart + secondPart
 }
 
-console.log(addPy('Pypickles'))
-console.log(addPy('yickles'))
-console.log(addPy('pypickles'))
-console.log(addPy('chocolate'))
+console.log(removeIndex('chocolate', 3));
+console.log(removeIndex('chocolate', 6));
+console.log(removeIndex('chocolate', 0));
