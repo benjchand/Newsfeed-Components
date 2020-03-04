@@ -70,6 +70,20 @@
 // console.log(within200or400(380))
 // console.log(within200or400(379))
 
-function otherSideOfZero(num1, num2) {
-    return ((num1 > 0 && num2 < 0) || (num2 > 0 && num1 < 0))
+// function otherSideOfZero(num1, num2) {
+//     return ((num1 > 0 && num2 < 0) || (num2 > 0 && num1 < 0))
+// }
+
+function addPy(str) {
+    if (str == null || str == undefined || str.substring(0, 2) == 'py' || str.substring(0, 2) == 'Py') {
+        return str
+    }
+    else {
+        return 'Py' + str
+    }
 }
+
+console.log(addPy('Pypickles'))
+console.log(addPy('yickles'))
+console.log(addPy('pypickles'))
+console.log(addPy('chocolate'))
