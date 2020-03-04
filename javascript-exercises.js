@@ -108,12 +108,27 @@
 // console.log(switchFirstAndLast('B'))
 // console.log(switchFirstAndLast('AZ'))
 
-function multipleOf37(num) {
-    return (num % 3 == 0 || num % 7 == 0)
+// function multipleOf37(num) {
+//     return (num % 3 == 0 || num % 7 == 0)
+// }
+// console.log(multipleOf37(2))
+// console.log(multipleOf37(6))
+// console.log(multipleOf37(7))
+// console.log(multipleOf37(42))
+// console.log(multipleOf37(1000))
+
+
+function scriptCheck(str) {
+    let resultStr = str;
+    if (str.length < 9) {
+        return str
+    }
+    if (str.substring(4, 10) == 'script') {
+        resultStr = str.substring(0, 4) + str.substring(10, str.length)
+    }
+    return resultStr
 }
 
-console.log(multipleOf37(2))
-console.log(multipleOf37(6))
-console.log(multipleOf37(7))
-console.log(multipleOf37(42))
-console.log(multipleOf37(1000))
+console.log(scriptCheck('javascript'))
+console.log(scriptCheck('javascriptend'))
+console.log(scriptCheck('javscript'))
