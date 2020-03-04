@@ -152,13 +152,25 @@
 // console.log(checkForCharacter('pickles', 'd'))
 // console.log(checkForCharacter('method', 'h'))
 
-function lastDigit(num1, num2, num3) {
-    if (num1 > 0 && num2 > 0 && num3 > 0) {
-        return ((num1 % 10 == num2 % 10) && (num2 % 10 == num3 % 10))
+// function lastDigit(num1, num2, num3) {
+//     if (num1 > 0 && num2 > 0 && num3 > 0) {
+//         return ((num1 % 10 == num2 % 10) && (num2 % 10 == num3 % 10))
+//     }
+//     return false
+// }
+
+// console.log(lastDigit(6, 56, 984912846))
+// console.log(lastDigit(7, 57, 16))
+// console.log(lastDigit(-19, 19, 39))
+
+function toLower(str) {
+    if (str.length < 3) {
+        return str.toUpperCase()
     }
-    return false
+    return str.substring(0, 3).toLowerCase() + str.substring(3, str.length)
 }
 
-console.log(lastDigit(6, 56, 984912846))
-console.log(lastDigit(7, 57, 16))
-console.log(lastDigit(-19, 19, 39))
+console.log(toLower('Python'))
+console.log(toLower('PYTHON'))
+console.log(toLower('AbC'))
+console.log(toLower('aBc'))
