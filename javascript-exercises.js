@@ -97,13 +97,23 @@
 // console.log(removeIndex('chocolate', 6));
 // console.log(removeIndex('chocolate', 0));
 
-function switchFirstAndLast(str) {
-    if (str.length <= 1) {
-        return str
-    }
-    let middlePart = str.substring(1, str.length - 1);
-    return (str.charAt(str.length - 1) + middlePart + str.charAt(0))
+// function switchFirstAndLast(str) {
+//     if (str.length <= 1) {
+//         return str
+//     }
+//     let middlePart = str.substring(1, str.length - 1);
+//     return (str.charAt(str.length - 1) + middlePart + str.charAt(0))
+// }
+// console.log(switchFirstAndLast('Pickles'))
+// console.log(switchFirstAndLast('B'))
+// console.log(switchFirstAndLast('AZ'))
+
+function multipleOf37(num) {
+    return (num % 3 == 0 || num % 7 == 0)
 }
-console.log(switchFirstAndLast('Pickles'))
-console.log(switchFirstAndLast('B'))
-console.log(switchFirstAndLast('AZ'))
+
+console.log(multipleOf37(2))
+console.log(multipleOf37(6))
+console.log(multipleOf37(7))
+console.log(multipleOf37(42))
+console.log(multipleOf37(1000))
