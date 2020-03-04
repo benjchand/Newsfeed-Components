@@ -163,14 +163,22 @@
 // console.log(lastDigit(7, 57, 16))
 // console.log(lastDigit(-19, 19, 39))
 
-function toLower(str) {
-    if (str.length < 3) {
-        return str.toUpperCase()
-    }
-    return str.substring(0, 3).toLowerCase() + str.substring(3, str.length)
+// function toLower(str) {
+//     if (str.length < 3) {
+//         return str.toUpperCase()
+//     }
+//     return str.substring(0, 3).toLowerCase() + str.substring(3, str.length)
+// }
+// console.log(toLower('Python'))
+// console.log(toLower('PYTHON'))
+// console.log(toLower('AbC'))
+// console.log(toLower('aBc'))
+
+function lookingFor8(num1, num2) {
+    return (num1 == 8 || num2 == 8 || num1 + num2 == 8 || Math.abs(num1 - num2) == 8)
 }
 
-console.log(toLower('Python'))
-console.log(toLower('PYTHON'))
-console.log(toLower('AbC'))
-console.log(toLower('aBc'))
+console.log(lookingFor8(4, 4))
+console.log(lookingFor8(8, 9))
+console.log(lookingFor8(32, 40))
+console.log(lookingFor8(100, 40))
