@@ -174,11 +174,31 @@
 // console.log(toLower('AbC'))
 // console.log(toLower('aBc'))
 
-function lookingFor8(num1, num2) {
-    return (num1 == 8 || num2 == 8 || num1 + num2 == 8 || Math.abs(num1 - num2) == 8)
+// function lookingFor8(num1, num2) {
+//     return (num1 == 8 || num2 == 8 || num1 + num2 == 8 || Math.abs(num1 - num2) == 8)
+// }
+// console.log(lookingFor8(4, 4))
+// console.log(lookingFor8(8, 9))
+// console.log(lookingFor8(32, 40))
+// console.log(lookingFor8(100, 40))
+
+// function softOrStrict(x, y, z) {
+//     if (x < y && y < z) {
+//         return `Strict Mode`
+//     }
+//     else if (x < z) {
+//         return `Soft Mode`
+//     }
+//     return `Not Increasing`
+// }
+// console.log(softOrStrict(33, 2, 34))
+// console.log(softOrStrict(1, 2, 3))
+// console.log(softOrStrict(33, 900, 33))
+
+function reverseString(str) {
+    return str.split('').reverse().join('')
 }
 
-console.log(lookingFor8(4, 4))
-console.log(lookingFor8(8, 9))
-console.log(lookingFor8(32, 40))
-console.log(lookingFor8(100, 40))
+console.log(reverseString('pickles'))
+console.log(reverseString('abcdefg'))
+console.log(reverseString('RACecar'))
