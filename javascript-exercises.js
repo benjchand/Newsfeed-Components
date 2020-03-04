@@ -118,17 +118,59 @@
 // console.log(multipleOf37(1000))
 
 
-function scriptCheck(str) {
-    let resultStr = str;
-    if (str.length < 9) {
-        return str
+// function scriptCheck(str) {
+//     let resultStr = str;
+//     if (str.length < 9) {
+//         return str
+//     }
+//     if (str.substring(4, 10) == 'script') {
+//         resultStr = str.substring(0, 4) + str.substring(10, str.length)
+//     }
+//     return resultStr
+// }
+// console.log(scriptCheck('javascript'))
+// console.log(scriptCheck('javascriptend'))
+// console.log(scriptCheck('javscript'))
+
+// function largestInteger(num1, num2, num3) {
+//     return Math.max(num1, num2, num3)
+// }
+// console.log(largestInteger(23, -8, 150))
+// console.log(largestInteger(-99, -100, -150))
+// console.log(largestInteger(0, 0, 0))
+
+// function checkForCharacter(str, char) {
+//     for (i = 1; i <= 3; i++) {
+//         if (str[i] == char) {
+//             return true
+//         }
+//     }
+//     return false
+// }
+
+// console.log(checkForCharacter('javascript', 'a'))
+// console.log(checkForCharacter('pickles', 'd'))
+// console.log(checkForCharacter('method', 'h'))
+
+// function lastDigit(num1, num2, num3) {
+//     if (num1 > 0 && num2 > 0 && num3 > 0) {
+//         return ((num1 % 10 == num2 % 10) && (num2 % 10 == num3 % 10))
+//     }
+//     return false
+// }
+
+// console.log(lastDigit(6, 56, 984912846))
+// console.log(lastDigit(7, 57, 16))
+// console.log(lastDigit(-19, 19, 39))
+
+function toLower(str) {
+    if (str.length < 3) {
+        return str.toUpperCase()
     }
-    if (str.substring(4, 10) == 'script') {
-        resultStr = str.substring(0, 4) + str.substring(10, str.length)
-    }
-    return resultStr
+    return str.substring(0, 3).toLowerCase() + str.substring(3, str.length)
 }
 
-console.log(scriptCheck('javascript'))
-console.log(scriptCheck('javascriptend'))
-console.log(scriptCheck('javscript'))
+console.log(toLower('Python'))
+console.log(toLower('PYTHON'))
+console.log(toLower('AbC'))
+console.log(toLower('aBc'))
