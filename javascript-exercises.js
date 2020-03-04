@@ -195,10 +195,37 @@
 // console.log(softOrStrict(1, 2, 3))
 // console.log(softOrStrict(33, 900, 33))
 
-function reverseString(str) {
-    return str.split('').reverse().join('')
+// function reverseString(str) {
+//     return str.split('').reverse().join('')
+// }
+
+// console.log(reverseString('pickles'))
+// console.log(reverseString('abcdefg'))
+// console.log(reverseString('RACecar'))
+
+function letterShift(str) {
+    let s = str.split('');
+    for (i = 0; i < s.length; i++) {
+        switch (s[i]) {
+            case ' ':
+                break;
+            case 'z':
+                s[i] = 'a';
+                break;
+            case 'Z':
+                s[i] = 'A';
+                break;
+            case '9':
+                s[i] = '0';
+                break;
+            default:
+                s[i] = String.fromCharCode(1 + s[i].charCodeAt(0));
+        }
+    }
+    return s.join('')
 }
 
-console.log(reverseString('pickles'))
-console.log(reverseString('abcdefg'))
-console.log(reverseString('RACecar'))
+console.log(letterShift('Chocolate'))
+console.log(letterShift('Ice Cream'))
+console.log(letterShift('3 Blind Pickled Beans 2 Zap Among'))
+console.log(letterShift('13579'))
