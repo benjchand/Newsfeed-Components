@@ -118,17 +118,23 @@
 // console.log(multipleOf37(1000))
 
 
-function scriptCheck(str) {
-    let resultStr = str;
-    if (str.length < 9) {
-        return str
-    }
-    if (str.substring(4, 10) == 'script') {
-        resultStr = str.substring(0, 4) + str.substring(10, str.length)
-    }
-    return resultStr
-}
+// function scriptCheck(str) {
+//     let resultStr = str;
+//     if (str.length < 9) {
+//         return str
+//     }
+//     if (str.substring(4, 10) == 'script') {
+//         resultStr = str.substring(0, 4) + str.substring(10, str.length)
+//     }
+//     return resultStr
+// }
+// console.log(scriptCheck('javascript'))
+// console.log(scriptCheck('javascriptend'))
+// console.log(scriptCheck('javscript'))
 
-console.log(scriptCheck('javascript'))
-console.log(scriptCheck('javascriptend'))
-console.log(scriptCheck('javscript'))
+// function largestInteger(num1, num2, num3) {
+//     return Math.max(num1, num2, num3)
+// }
+// console.log(largestInteger(23, -8, 150))
+// console.log(largestInteger(-99, -100, -150))
+// console.log(largestInteger(0, 0, 0))
