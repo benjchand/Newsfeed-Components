@@ -203,29 +203,44 @@
 // console.log(reverseString('abcdefg'))
 // console.log(reverseString('RACecar'))
 
-function letterShift(str) {
-    let s = str.split('');
-    for (i = 0; i < s.length; i++) {
-        switch (s[i]) {
-            case ' ':
-                break;
-            case 'z':
-                s[i] = 'a';
-                break;
-            case 'Z':
-                s[i] = 'A';
-                break;
-            case '9':
-                s[i] = '0';
-                break;
-            default:
-                s[i] = String.fromCharCode(1 + s[i].charCodeAt(0));
-        }
+// function letterShift(str) {
+//     let s = str.split('');
+//     for (i = 0; i < s.length; i++) {
+//         switch (s[i]) {
+//             case ' ':
+//                 break;
+//             case 'z':
+//                 s[i] = 'a';
+//                 break;
+//             case 'Z':
+//                 s[i] = 'A';
+//                 break;
+//             case '9':
+//                 s[i] = '0';
+//                 break;
+//             default:
+//                 s[i] = String.fromCharCode(1 + s[i].charCodeAt(0));
+//         }
+//     }
+//     return s.join('')
+// }
+// console.log(letterShift('Chocolate'))
+// console.log(letterShift('Ice Cream'))
+// console.log(letterShift('3 Blind Pickled Beans 2 Zap Among'))
+// console.log(letterShift('13579'))
+
+function capitalizeWord(str) {
+    if (str.length == 0) {
+        return 'NONE'
     }
-    return s.join('')
+    let words = str.split(' ');
+    for (let i = 0; i < words.length; i++) {
+        words[i] = words[i][0].toUpperCase() + words[i].substring(1)
+    }
+    return words.join(' ')
 }
 
-console.log(letterShift('Chocolate'))
-console.log(letterShift('Ice Cream'))
-console.log(letterShift('3 Blind Pickled Beans 2 Zap Among'))
-console.log(letterShift('13579'))
+console.log(capitalizeWord('This is a sentence of words'))
+console.log(capitalizeWord('this Sentence has 5 words'))
+console.log(capitalizeWord('39234'))
+console.log(capitalizeWord(''))
