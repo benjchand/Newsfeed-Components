@@ -246,10 +246,38 @@
 // console.log(capitalizeWord(''))
 
 
-function hoursToMin(num) {
-    return parseInt((num * 60).toFixed(3))
+// function hoursToMin(num) {
+//     return parseFloat((num * 60).toFixed(3))
+// }
+
+// console.log(hoursToMin(3))
+// console.log(hoursToMin(.1111111111))
+// console.log(hoursToMin(9))
+
+// function sortLetters(str) {
+//     return str.split('').sort().join('')
+// }
+// console.log(sortLetters('absjdhren'))
+// console.log(sortLetters('Pickles'))
+// console.log(sortLetters('zZmMaA'))
+
+function searchForAandB(str) {
+    let found = false
+    if (str.length < 4) {
+        return found
+    }
+    for (let i = 0; i < str.length - 4; i++) {
+        if (str[i] == 'a' || str[i] == 'A') {
+            if (str[i + 4] == 'b' || str[i + 4] == 'B') {
+                found = true
+                return found
+            }
+        }
+    }
+    return found
 }
 
-console.log(hoursToMin(3))
-console.log(hoursToMin(.1111111111))
-console.log(hoursToMin(9))
+console.log(searchForAandB('aaaab'))
+console.log(searchForAandB('AaaB'))
+console.log(searchForAandB('AaaaB'))
+console.log(searchForAandB('asdfasfdAaaaB'))
