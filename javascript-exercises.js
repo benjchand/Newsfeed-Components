@@ -229,18 +229,27 @@
 // console.log(letterShift('3 Blind Pickled Beans 2 Zap Among'))
 // console.log(letterShift('13579'))
 
-function capitalizeWord(str) {
-    if (str.length == 0) {
-        return 'NONE'
-    }
-    let words = str.split(' ');
-    for (let i = 0; i < words.length; i++) {
-        words[i] = words[i][0].toUpperCase() + words[i].substring(1)
-    }
-    return words.join(' ')
+// function capitalizeWord(str) {
+//     if (str.length == 0) {
+//         return 'NONE'
+//     }
+//     let words = str.split(' ');
+//     for (let i = 0; i < words.length; i++) {
+//         words[i] = words[i][0].toUpperCase() + words[i].substring(1)
+//     }
+//     return words.join(' ')
+// }
+
+// console.log(capitalizeWord('This is a sentence of words'))
+// console.log(capitalizeWord('this Sentence has 5 words'))
+// console.log(capitalizeWord('39234'))
+// console.log(capitalizeWord(''))
+
+
+function hoursToMin(num) {
+    return parseInt((num * 60).toFixed(3))
 }
 
-console.log(capitalizeWord('This is a sentence of words'))
-console.log(capitalizeWord('this Sentence has 5 words'))
-console.log(capitalizeWord('39234'))
-console.log(capitalizeWord(''))
+console.log(hoursToMin(3))
+console.log(hoursToMin(.1111111111))
+console.log(hoursToMin(9))
