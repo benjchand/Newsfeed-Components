@@ -289,18 +289,25 @@
 // console.log(psAndts('pptt'))
 
 
-function divisionCommas(num1, num2) {
-    let result = Math.round(num1 / num2).toString()
-    if (result < 1000) {
-        return result
-    }
-    let resultArray = result.split('')
-    for (let i = resultArray.length - 3; i > 0; i -= 3) {
-        resultArray.splice(i, 0, ',')
-    }
-    let resultNumber = resultArray.join('')
-    return resultNumber
+// function divisionCommas(num1, num2) {
+//     let result = Math.round(num1 / num2).toString()
+//     if (result < 1000) {
+//         return result
+//     }
+//     let resultArray = result.split('')
+//     for (let i = resultArray.length - 3; i > 0; i -= 3) {
+//         resultArray.splice(i, 0, ',')
+//     }
+//     let resultNumber = resultArray.join('')
+//     return resultNumber
+// }
+
+// console.log(divisionCommas(100, 6))
+// console.log(divisionCommas(100023482934892343, 3))
+
+
+function repeatString(str, n) {
+    return str.repeat(n)
 }
 
-console.log(divisionCommas(100, 6))
-console.log(divisionCommas(100023482934892343, 3))
+console.log(repeatString('abc', 3))
