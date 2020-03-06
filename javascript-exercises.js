@@ -306,8 +306,15 @@
 // console.log(divisionCommas(100023482934892343, 3))
 
 
+// function repeatString(str, n) {
+//     return str.repeat(n)
+// }
 function repeatString(str, n) {
-    return str.repeat(n)
+    let result = ''
+    for (i = 0; i < n; i++) {
+        result += str
+    }
+    return result
 }
 
 console.log(repeatString('abc', 3))
