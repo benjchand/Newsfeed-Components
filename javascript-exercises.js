@@ -330,11 +330,23 @@
 // console.log(halfOfEven('abcdef'))
 // console.log(halfOfEven('abcde'))
 
-function sumHelper(total, num) {
-    return total + num
-}
-function sumArray(arr) {
-    return arr.reduce(sumHelper)
+// function sumHelper(total, num) {
+//     return total + num
+// }
+// function sumArray(arr) {
+//     return arr.reduce(sumHelper)
+// }
+
+// console.log(sumArray([99, -98, 4]))
+
+
+function longest_string(arr) {
+    let max = arr[0].length;
+    arr.map(element => max = Math.max(max, element.toString().length))
+    result = arr.filter(element => element.toString().length == max)
+    return result
 }
 
-console.log(sumArray([99, -98, 4]))
+console.log(longest_string(['aaa', 'aaaaaaaa', 'aaaaaaa', 'a', 'bbbbbbbb', 'cccccccc']))
+console.log(longest_string(['aaa', 'aaaaaaaa', 'aaaaaaa', 'a', 'bbbbbbbb', 'cccccccc', 111111111]))
+
