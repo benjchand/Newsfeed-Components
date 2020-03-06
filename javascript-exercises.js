@@ -320,12 +320,21 @@
 // console.log(repeatString('abc', 3))
 
 
-function halfOfEven(str) {
-    if (str.length % 2 == 0) {
-        return str.substring(0, str.length / 2)
-    }
-    return 'The string is not even-numbered.'
+// function halfOfEven(str) {
+//     if (str.length % 2 == 0) {
+//         return str.substring(0, str.length / 2)
+//     }
+//     return 'The string is not even-numbered.'
+// }
+
+// console.log(halfOfEven('abcdef'))
+// console.log(halfOfEven('abcde'))
+
+function sumHelper(total, num) {
+    return total + num
+}
+function sumArray(arr) {
+    return arr.reduce(sumHelper)
 }
 
-console.log(halfOfEven('abcdef'))
-console.log(halfOfEven('abcde'))
+console.log(sumArray([99, -98, 4]))
