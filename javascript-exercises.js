@@ -278,12 +278,29 @@
 // console.log(vowelCount('Ice Cream'))
 // console.log(vowelCount('aaeeiiou'))
 
-function psAndts(str) {
+// function psAndts(str) {
 
-    return (str.replace(/[^p]/gi, '').length == str.replace(/[^t]/gi, '').length)
+//     return (str.replace(/[^p]/gi, '').length == str.replace(/[^t]/gi, '').length)
+// }
+
+// console.log(psAndts('TPdentP'))
+// console.log(psAndts('tpPpTtptPt'))
+// console.log(psAndts('tpPpTtptP'))
+// console.log(psAndts('pptt'))
+
+
+function divisionCommas(num1, num2) {
+    let result = Math.round(num1 / num2).toString()
+    if (result < 1000) {
+        return result
+    }
+    let resultArray = result.split('')
+    for (let i = resultArray.length - 3; i > 0; i -= 3) {
+        resultArray.splice(i, 0, ',')
+    }
+    let resultNumber = resultArray.join('')
+    return resultNumber
 }
 
-console.log(psAndts('TPdentP'))
-console.log(psAndts('tpPpTtptPt'))
-console.log(psAndts('tpPpTtptP'))
-console.log(psAndts('pptt'))
+console.log(divisionCommas(100, 6))
+console.log(divisionCommas(100023482934892343, 3))
