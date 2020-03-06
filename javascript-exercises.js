@@ -203,29 +203,81 @@
 // console.log(reverseString('abcdefg'))
 // console.log(reverseString('RACecar'))
 
-function letterShift(str) {
-    let s = str.split('');
-    for (i = 0; i < s.length; i++) {
-        switch (s[i]) {
-            case ' ':
-                break;
-            case 'z':
-                s[i] = 'a';
-                break;
-            case 'Z':
-                s[i] = 'A';
-                break;
-            case '9':
-                s[i] = '0';
-                break;
-            default:
-                s[i] = String.fromCharCode(1 + s[i].charCodeAt(0));
+// function letterShift(str) {
+//     let s = str.split('');
+//     for (i = 0; i < s.length; i++) {
+//         switch (s[i]) {
+//             case ' ':
+//                 break;
+//             case 'z':
+//                 s[i] = 'a';
+//                 break;
+//             case 'Z':
+//                 s[i] = 'A';
+//                 break;
+//             case '9':
+//                 s[i] = '0';
+//                 break;
+//             default:
+//                 s[i] = String.fromCharCode(1 + s[i].charCodeAt(0));
+//         }
+//     }
+//     return s.join('')
+// }
+// console.log(letterShift('Chocolate'))
+// console.log(letterShift('Ice Cream'))
+// console.log(letterShift('3 Blind Pickled Beans 2 Zap Among'))
+// console.log(letterShift('13579'))
+
+// function capitalizeWord(str) {
+//     if (str.length == 0) {
+//         return 'NONE'
+//     }
+//     let words = str.split(' ');
+//     for (let i = 0; i < words.length; i++) {
+//         words[i] = words[i][0].toUpperCase() + words[i].substring(1)
+//     }
+//     return words.join(' ')
+// }
+
+// console.log(capitalizeWord('This is a sentence of words'))
+// console.log(capitalizeWord('this Sentence has 5 words'))
+// console.log(capitalizeWord('39234'))
+// console.log(capitalizeWord(''))
+
+
+// function hoursToMin(num) {
+//     return parseFloat((num * 60).toFixed(3))
+// }
+
+// console.log(hoursToMin(3))
+// console.log(hoursToMin(.1111111111))
+// console.log(hoursToMin(9))
+
+// function sortLetters(str) {
+//     return str.split('').sort().join('')
+// }
+// console.log(sortLetters('absjdhren'))
+// console.log(sortLetters('Pickles'))
+// console.log(sortLetters('zZmMaA'))
+
+function searchForAandB(str) {
+    let found = false
+    if (str.length < 4) {
+        return found
+    }
+    for (let i = 0; i < str.length - 4; i++) {
+        if (str[i] == 'a' || str[i] == 'A') {
+            if (str[i + 4] == 'b' || str[i + 4] == 'B') {
+                found = true
+                return found
+            }
         }
     }
-    return s.join('')
+    return found
 }
 
-console.log(letterShift('Chocolate'))
-console.log(letterShift('Ice Cream'))
-console.log(letterShift('3 Blind Pickled Beans 2 Zap Among'))
-console.log(letterShift('13579'))
+console.log(searchForAandB('aaaab'))
+console.log(searchForAandB('AaaB'))
+console.log(searchForAandB('AaaaB'))
+console.log(searchForAandB('asdfasfdAaaaB'))
