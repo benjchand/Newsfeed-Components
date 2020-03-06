@@ -261,23 +261,29 @@
 // console.log(sortLetters('Pickles'))
 // console.log(sortLetters('zZmMaA'))
 
-function searchForAandB(str) {
-    let found = false
-    if (str.length < 4) {
-        return found
-    }
-    for (let i = 0; i < str.length - 4; i++) {
-        if (str[i] == 'a' || str[i] == 'A') {
-            if (str[i + 4] == 'b' || str[i + 4] == 'B') {
-                found = true
-                return found
-            }
-        }
-    }
-    return found
+// function searchForAandB(str) {
+//     return (/a...b/i).test(str) || (/b...a/i).test(str)
+// }
+
+// console.log(searchForAandB('aaaab'))
+// console.log(searchForAandB('AaaB'))
+// console.log(searchForAandB('AaaaB'))
+// console.log(searchForAandB('asdfasfdAaaaB'))
+
+// function vowelCount(str) {
+//     return str.replace(/[^aeoiu]/g, '').length;
+// }
+
+// console.log(vowelCount('pickles'))
+// console.log(vowelCount('Ice Cream'))
+// console.log(vowelCount('aaeeiiou'))
+
+function psAndts(str) {
+
+    return (str.replace(/[^p]/gi, '').length == str.replace(/[^t]/gi, '').length)
 }
 
-console.log(searchForAandB('aaaab'))
-console.log(searchForAandB('AaaB'))
-console.log(searchForAandB('AaaaB'))
-console.log(searchForAandB('asdfasfdAaaaB'))
+console.log(psAndts('TPdentP'))
+console.log(psAndts('tpPpTtptPt'))
+console.log(psAndts('tpPpTtptP'))
+console.log(psAndts('pptt'))
