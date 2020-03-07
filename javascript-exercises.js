@@ -261,23 +261,193 @@
 // console.log(sortLetters('Pickles'))
 // console.log(sortLetters('zZmMaA'))
 
-function searchForAandB(str) {
-    let found = false
-    if (str.length < 4) {
-        return found
-    }
-    for (let i = 0; i < str.length - 4; i++) {
-        if (str[i] == 'a' || str[i] == 'A') {
-            if (str[i + 4] == 'b' || str[i + 4] == 'B') {
-                found = true
-                return found
-            }
+// function searchForAandB(str) {
+//     return (/a...b/i).test(str) || (/b...a/i).test(str)
+// }
+
+// console.log(searchForAandB('aaaab'))
+// console.log(searchForAandB('AaaB'))
+// console.log(searchForAandB('AaaaB'))
+// console.log(searchForAandB('asdfasfdAaaaB'))
+
+// function vowelCount(str) {
+//     return str.replace(/[^aeoiu]/g, '').length;
+// }
+
+// console.log(vowelCount('pickles'))
+// console.log(vowelCount('Ice Cream'))
+// console.log(vowelCount('aaeeiiou'))
+
+// function psAndts(str) {
+
+//     return (str.replace(/[^p]/gi, '').length == str.replace(/[^t]/gi, '').length)
+// }
+
+// console.log(psAndts('TPdentP'))
+// console.log(psAndts('tpPpTtptPt'))
+// console.log(psAndts('tpPpTtptP'))
+// console.log(psAndts('pptt'))
+
+
+// function divisionCommas(num1, num2) {
+//     let result = Math.round(num1 / num2).toString()
+//     if (result < 1000) {
+//         return result
+//     }
+//     let resultArray = result.split('')
+//     for (let i = resultArray.length - 3; i > 0; i -= 3) {
+//         resultArray.splice(i, 0, ',')
+//     }
+//     let resultNumber = resultArray.join('')
+//     return resultNumber
+// }
+
+// console.log(divisionCommas(100, 6))
+// console.log(divisionCommas(100023482934892343, 3))
+
+
+// function repeatString(str, n) {
+//     return str.repeat(n)
+// }
+// function repeatString(str, n) {
+//     let result = ''
+//     for (i = 0; i < n; i++) {
+//         result += str
+//     }
+//     return result
+// }
+
+// console.log(repeatString('abc', 3))
+
+
+// function halfOfEven(str) {
+//     if (str.length % 2 == 0) {
+//         return str.substring(0, str.length / 2)
+//     }
+//     return 'The string is not even-numbered.'
+// }
+
+// console.log(halfOfEven('abcdef'))
+// console.log(halfOfEven('abcde'))
+
+// function sumHelper(total, num) {
+//     return total + num
+// }
+// function sumArray(arr) {
+//     return arr.reduce(sumHelper)
+// }
+
+// console.log(sumArray([99, -98, 4]))
+
+// function longest_string(arr) {
+//     let max = arr[0].length;
+//     arr.map(element => max = Math.max(max, element.toString().length))
+//     result = arr.filter(element => element.toString().length == max)
+//     return result
+// }
+
+// console.log(longest_string(['aaa', 'aaaaaaaa', 'aaaaaaa', 'a', 'bbbbbbbb', 'cccccccc']))
+// console.log(longest_string(['aaa', 'aaaaaaaa', 'aaaaaaa', 'a', 'bbbbbbbb', 'cccccccc', 111111111]))
+
+
+// function shiftCharacter(str) {
+//     let split = str.split('')
+//     for (i = 0; i < split.length; i++) {
+//         let uppercase = 'A'
+//         if (/[^a-zA-Z]/.test(split[i])) {
+//             continue
+//         }
+//         let numberConversion = str[i].charCodeAt()
+//         if (numberConversion > 90) {
+//             uppercase = 'a'
+//         }
+//         let n = numberConversion - uppercase.charCodeAt()
+//         n = (n + 1) % 26
+//         split[i] = String.fromCharCode(n + uppercase.charCodeAt())
+//     }
+//     return split.join('')
+// }
+
+// console.log(shiftCharacter('Pickles'))
+// console.log(shiftCharacter('A zany Zebra'))
+// console.log(shiftCharacter(`3 Chocolate's bunny(ies) [in brackets]`))
+
+
+// function similarArrays(arr1, arr2) {
+//     if (arr1.length != arr2.length) {
+//         return false
+//     }
+//     let diffCount = 0
+//     let arr1Diff = ''
+//     let arr2Diff = ''
+//     for (i = 0; i < arr1.length; i++) {
+//         if (arr1[i] != arr2[i]) {
+//             if (diffCount == 2) {
+//                 return false
+//             }
+//             if (diffCount == 0) {
+//                 diffCount += 1
+//                 arr1Diff = arr1[i]
+//                 arr2Diff = arr2[i]
+//             }
+//             else {
+//                 if (arr1[i] != arr2Diff && arr2[i] != arr1Diff) {
+//                     return false
+//                 }
+//                 diffCount += 1
+//             }
+//         }
+//     }
+//     if (diffCount % 2 == 1 || diffCount > 2) {
+//         return false
+//     }
+//     return true
+// }
+
+// console.log(similarArrays([10, 20, 30, 40, 50], [10, 20, 30, 40, 50]) + `  Should be True`)
+// console.log(similarArrays([30, 20, 10, 40, 50], [10, 20, 30, 40, 50]) + `  Should be True`)
+// console.log(similarArrays([30, 20, 10, 40, 50], [10, 20, 40, 30, 50]) + `  Should be False`)
+// console.log(similarArrays([10, 20, 10, 40, 50], [10, 20, 30, 40, 50]) + `  Should be False`)
+// console.log(similarArrays([10, 20, 30, 40, 50], [10, 20, 30, 40]) + `  Should be False`)
+
+// function arithmeticExpression(x, y, z) {
+//     return x + y == z || x - y == z || x * y == z || x / y == z
+// }
+
+// console.log(arithmeticExpression(10, 25, 35))
+// console.log(arithmeticExpression(10, 25, 250))
+// console.log(arithmeticExpression(30, 25, 5))
+// console.log(arithmeticExpression(100, 25, 4.0))
+// console.log(arithmeticExpression(100, 25, 25))
+
+
+// function kthGreatest(arr, k) {
+//     let sortedArr = arr.sort((a, b) => { return a - b })
+//     console.log(sortedArr)
+//     return sortedArr[sortedArr.length - k]
+// }
+
+// console.log(kthGreatest([10, 1, 20, 3, 30, 0], 2))
+
+function digitToOne(num) {
+    let times = 0
+    function digitsum(num) {
+        let digitSum = 0
+        while (num) {
+            console.log(num)
+            digitSum += num % 10
+            console.log(digitSum + "   This is the digitSum")
+            num = Math.floor(num / 10)
+            console.log(num + "   This is the num")
+
         }
+        return digitSum
     }
-    return found
+    while (num >= 10) {
+        times += 1
+        num = digitsum(num)
+    }
+    return times
 }
 
-console.log(searchForAandB('aaaab'))
-console.log(searchForAandB('AaaB'))
-console.log(searchForAandB('AaaaB'))
-console.log(searchForAandB('asdfasfdAaaaB'))
+console.log(`The Number of times is:  ` + digitToOne(12345))
