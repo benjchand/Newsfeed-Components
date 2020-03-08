@@ -452,15 +452,26 @@
 
 // console.log(`The Number of times is:  ` + digitToOne(12345))
 
-function uppercase(str) {
-    const upperRegex = /^[A-Z]/
-    if (upperRegex.test(str)) {
-        console.log('First letter is uppercase')
+// function uppercase(str) {
+//     const upperRegex = /^[A-Z]/
+//     if (upperRegex.test(str)) {
+//         console.log('First letter is uppercase')
+//     }
+//     else {
+//         console.log(`LOWERCASE!!!!!!`)
+//     }
+// }
+
+// uppercase('abcd')
+// uppercase('Abcd')
+
+function creditCard(num) {
+    const visaRegex = /^(?:4[0-9]{12})(?:[0-9]{3})?$/
+    if (visaRegex.test(num)) {
+        console.log(`Visa Card`)
     }
-    else {
-        console.log(`LOWERCASE!!!!!!`)
-    }
+    else { console.log(`Not a credit Card`) }
 }
 
-uppercase('abcd')
-uppercase('Abcd')
+
+console.log(creditCard(`4111111111111111`))
