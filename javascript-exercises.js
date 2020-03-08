@@ -429,25 +429,38 @@
 
 // console.log(kthGreatest([10, 1, 20, 3, 30, 0], 2))
 
-function digitToOne(num) {
-    let times = 0
-    function digitsum(num) {
-        let digitSum = 0
-        while (num) {
-            console.log(num)
-            digitSum += num % 10
-            console.log(digitSum + "   This is the digitSum")
-            num = Math.floor(num / 10)
-            console.log(num + "   This is the num")
+// function digitToOne(num) {
+//     let times = 0
+//     function digitsum(num) {
+//         let digitSum = 0
+//         while (num) {
+//             console.log(num)
+//             digitSum += num % 10
+//             console.log(digitSum + "   This is the digitSum")
+//             num = Math.floor(num / 10)
+//             console.log(num + "   This is the num")
 
-        }
-        return digitSum
+//         }
+//         return digitSum
+//     }
+//     while (num >= 10) {
+//         times += 1
+//         num = digitsum(num)
+//     }
+//     return times
+// }
+
+// console.log(`The Number of times is:  ` + digitToOne(12345))
+
+function uppercase(str) {
+    const upperRegex = /^[A-Z]/
+    if (upperRegex.test(str)) {
+        console.log('First letter is uppercase')
     }
-    while (num >= 10) {
-        times += 1
-        num = digitsum(num)
+    else {
+        console.log(`LOWERCASE!!!!!!`)
     }
-    return times
 }
 
-console.log(`The Number of times is:  ` + digitToOne(12345))
+uppercase('abcd')
+uppercase('Abcd')
