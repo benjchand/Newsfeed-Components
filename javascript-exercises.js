@@ -452,15 +452,52 @@
 
 // console.log(`The Number of times is:  ` + digitToOne(12345))
 
-function uppercase(str) {
-    const upperRegex = /^[A-Z]/
-    if (upperRegex.test(str)) {
-        console.log('First letter is uppercase')
+// function uppercase(str) {
+//     const upperRegex = /^[A-Z]/
+//     if (upperRegex.test(str)) {
+//         console.log('First letter is uppercase')
+//     }
+//     else {
+//         console.log(`LOWERCASE!!!!!!`)
+//     }
+// }
+
+// uppercase('abcd')
+// uppercase('Abcd')
+
+function creditCard(num) {
+    const visaRegex = /^(?:4[0-9]{12})(?:[0-9]{3})?$/
+    const mastRegex = /^(?:5[1-5]\d{2}|222[1-9]|22[3-9]\d|2[3-6]\d{2}|27[01]\d|2720)\d{12}$/
+    const amerRegex = /^(?:34|35)\d{13}$/
+    const dinersRegex = /^3(?:0[0-5]|[68]\d)\d{11}$/
+    const discovRegex = /^(?:6011|65\d{2})\d{12}$/
+    const jcbRegex = /^((2131|1800|35\d{3})\d{11})/
+    if (visaRegex.test(num)) {
+        console.log(`Visa Card`)
     }
-    else {
-        console.log(`LOWERCASE!!!!!!`)
+    else if (mastRegex.test(num)) {
+        console.log(`Master Card`)
     }
+    else if (amerRegex.test(num)) {
+        console.log(`American Express`)
+    }
+    else if (dinersRegex.test(num)) {
+        console.log(`You use Diner's Club?`)
+    }
+    else if (discovRegex.test(num)) {
+        console.log(`Discover Card`)
+    }
+    else if (jcbRegex.test(num)) {
+        console.log(`This is a JCB Card.`)
+    }
+    else { console.log(`Not a credit Card`) }
 }
 
-uppercase('abcd')
-uppercase('Abcd')
+creditCard(`4111111111111111`)
+creditCard(`5190938492939493`)
+creditCard(`349999999999999`)
+creditCard(`30399999999999`)
+creditCard(`6011999999999999`)
+creditCard(`213199999999999`)
+
+
