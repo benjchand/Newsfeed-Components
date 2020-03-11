@@ -465,39 +465,70 @@
 // uppercase('abcd')
 // uppercase('Abcd')
 
-function creditCard(num) {
-    const visaRegex = /^(?:4[0-9]{12})(?:[0-9]{3})?$/
-    const mastRegex = /^(?:5[1-5]\d{2}|222[1-9]|22[3-9]\d|2[3-6]\d{2}|27[01]\d|2720)\d{12}$/
-    const amerRegex = /^(?:34|35)\d{13}$/
-    const dinersRegex = /^3(?:0[0-5]|[68]\d)\d{11}$/
-    const discovRegex = /^(?:6011|65\d{2})\d{12}$/
-    const jcbRegex = /^((2131|1800|35\d{3})\d{11})/
-    if (visaRegex.test(num)) {
-        console.log(`Visa Card`)
-    }
-    else if (mastRegex.test(num)) {
-        console.log(`Master Card`)
-    }
-    else if (amerRegex.test(num)) {
-        console.log(`American Express`)
-    }
-    else if (dinersRegex.test(num)) {
-        console.log(`You use Diner's Club?`)
-    }
-    else if (discovRegex.test(num)) {
-        console.log(`Discover Card`)
-    }
-    else if (jcbRegex.test(num)) {
-        console.log(`This is a JCB Card.`)
-    }
-    else { console.log(`Not a credit Card`) }
-}
+// function creditCard(num) {
+//     const visaRegex = /^(?:4[0-9]{12})(?:[0-9]{3})?$/
+//     const mastRegex = /^(?:5[1-5]\d{2}|222[1-9]|22[3-9]\d|2[3-6]\d{2}|27[01]\d|2720)\d{12}$/
+//     const amerRegex = /^(?:34|35)\d{13}$/
+//     const dinersRegex = /^3(?:0[0-5]|[68]\d)\d{11}$/
+//     const discovRegex = /^(?:6011|65\d{2})\d{12}$/
+//     const jcbRegex = /^((2131|1800|35\d{3})\d{11})/
+//     if (visaRegex.test(num)) {
+//         console.log(`Visa Card`)
+//     }
+//     else if (mastRegex.test(num)) {
+//         console.log(`Master Card`)
+//     }
+//     else if (amerRegex.test(num)) {
+//         console.log(`American Express`)
+//     }
+//     else if (dinersRegex.test(num)) {
+//         console.log(`You use Diner's Club?`)
+//     }
+//     else if (discovRegex.test(num)) {
+//         console.log(`Discover Card`)
+//     }
+//     else if (jcbRegex.test(num)) {
+//         console.log(`This is a JCB Card.`)
+//     }
+//     else { console.log(`Not a credit Card`) }
+// }
 
-creditCard(`4111111111111111`)
-creditCard(`5190938492939493`)
-creditCard(`349999999999999`)
-creditCard(`30399999999999`)
-creditCard(`6011999999999999`)
-creditCard(`213199999999999`)
+// creditCard(`4111111111111111`)
+// creditCard(`5190938492939493`)
+// creditCard(`349999999999999`)
+// creditCard(`30399999999999`)
+// creditCard(`6011999999999999`)
+// creditCard(`213199999999999`)
 
+
+// function emailCheck(str) {
+//     const emailRegex = /^\w+((\.?)\w+)*@\w+((\.?)\w+)*(\.\w{2,3})+$/
+//     if (emailRegex.test(str)) {
+//         console.log(`This email is valid.`)
+//     }
+//     else {
+//         console.log(`This is not a valid email.`)
+//     }
+// }
+// emailCheck(`mein828349234.3892fd.fo@exam.sdfas3dfp.ldfsdfe.com.go`)
+// emailCheck(`mein828349234.3892fd.fo@exam.sdfas3dfp.ldfsdfe.com.go`)
+
+
+// function dateCheck(str) {
+//     const dateRegex = /^(1[0-2]|0?[1-9])(\/|\-)(3[01]|[12][0-9]|0?[1-9])(\/|\-)((19|20)?\d{2})$/
+//     if (dateRegex.test(str)) {
+//         console.log(`This is a valid date.`)
+//         return dateRegex.test(str)
+//     }
+//     else {
+//         console.log(`This is not a valid date.`)
+//         return dateRegex.test(str)
+//     }
+// }
+
+// console.log(dateCheck(`12-31-90`) + ` True`)
+// console.log(dateCheck(`12-31-2099`) + ` True`)
+// console.log(dateCheck(`12-32-2099`) + ` False`)
+// console.log(dateCheck(`09-00-2000`) + ` False`)
+// console.log(dateCheck(`9-9-00`) + ` True`)
 

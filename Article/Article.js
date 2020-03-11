@@ -12,7 +12,7 @@ class Article {
   }
 
   expandArticle() {
-  // console.log(this)
+    // console.log(this)
     this.domElement.classList.toggle('article-open')
 
     // Using our reference to the domElement, toggle a class to expand or hide the article.
@@ -30,7 +30,7 @@ class Article {
 
 */
 
-let articles = document.querySelectorAll('.article')
-articles.forEach(function(oldArticle){
-  return new Article(oldArticle);
-});
+const articles = document.querySelectorAll('.article')
+articles.forEach(function (oldArticle) {
+  return new Article(oldArticle)
+})
