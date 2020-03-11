@@ -501,15 +501,34 @@
 // creditCard(`213199999999999`)
 
 
-function emailCheck(str) {
-    const emailRegex = /^\w+((\.?)\w+)*@\w+((\.?)\w+)*(\.\w{2,3})+$/
-    if (emailRegex.test(str)) {
-        console.log(`This email is valid.`)
-    }
-    else {
-        console.log(`This is not a valid email.`)
-    }
-}
-emailCheck(`mein828349234.3892fd.fo@exam.sdfas3dfp.ldfsdfe.com.go`)
-emailCheck(`mein828349234.3892fd.fo@exam.sdfas3dfp.ldfsdfe.com.go`)
+// function emailCheck(str) {
+//     const emailRegex = /^\w+((\.?)\w+)*@\w+((\.?)\w+)*(\.\w{2,3})+$/
+//     if (emailRegex.test(str)) {
+//         console.log(`This email is valid.`)
+//     }
+//     else {
+//         console.log(`This is not a valid email.`)
+//     }
+// }
+// emailCheck(`mein828349234.3892fd.fo@exam.sdfas3dfp.ldfsdfe.com.go`)
+// emailCheck(`mein828349234.3892fd.fo@exam.sdfas3dfp.ldfsdfe.com.go`)
+
+
+// function dateCheck(str) {
+//     const dateRegex = /^(1[0-2]|0?[1-9])(\/|\-)(3[01]|[12][0-9]|0?[1-9])(\/|\-)((19|20)?\d{2})$/
+//     if (dateRegex.test(str)) {
+//         console.log(`This is a valid date.`)
+//         return dateRegex.test(str)
+//     }
+//     else {
+//         console.log(`This is not a valid date.`)
+//         return dateRegex.test(str)
+//     }
+// }
+
+// console.log(dateCheck(`12-31-90`) + ` True`)
+// console.log(dateCheck(`12-31-2099`) + ` True`)
+// console.log(dateCheck(`12-32-2099`) + ` False`)
+// console.log(dateCheck(`09-00-2000`) + ` False`)
+// console.log(dateCheck(`9-9-00`) + ` True`)
 
