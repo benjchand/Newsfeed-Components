@@ -23,7 +23,6 @@
 //     document.getElementById("result").innerHTML = num1 / num2
 // }
 
-
 // Input Form for F to C and C to F
 
 // function fToC() {
