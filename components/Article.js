@@ -143,7 +143,6 @@ function articleMaker(object) {
       return newPara
     }
   })
-  console.log(paragraphPara);
   let spanButton = document.createElement('span');
 
   outerDiv.classList.add('article');
@@ -167,7 +166,7 @@ function articleMaker(object) {
 };
 
 const articlesDiv = document.querySelector('.articles');
-console.log(articlesDiv);
 data.forEach((info) => {
   articlesDiv.appendChild(articleMaker(info));
 });
+
